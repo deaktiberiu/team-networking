@@ -4,10 +4,7 @@ function insertPersons(data) {
     }
 
 function getPersonsHtml (persons) {
-    const personsList = persons.map(person =>{
-        return  getPersonHtml (person)
-        });
-    return personsList.join('');    
+    return  persons.map(getPersonHtml).join('');    
     }
 
 function getPersonHtml (person) {   
