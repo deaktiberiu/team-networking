@@ -7,5 +7,10 @@
         "firstName": "Nicolae",
         "lastName": "Matei",
         "gitHub" : "nmatei" 
+    },
+    {
+        "firstName": "Tiberiu",
+        "lastName": "Deak",
+        "gitHub" : "deaktiberiu" 
     }
 ]
