@@ -8,7 +8,7 @@ function getPersonsHtml (persons) {
     }
 
 function getPersonHtml (person) {   
-    return    `<tr>
+    return `<tr>
                 <td>${person.firstName}</td>
                 <td>${person.lastName}</td>
                 <td><a target="_blank" href="https://github.com/${person.gitHub}">Git</a></td> 
