@@ -3,16 +3,19 @@ function insertPersons(data) {
     tbody.innerHTML = getPersonsHtml(data);
     }
 
+
+
 function getPersonsHtml (persons) {
     const personsLi = persons.map(function(persons){
         return `<tr>
                 <td>${persons.firstName}</td>
                 <td>${persons.lastName}</td>
-                <td><a target="_blank" href="deaktiberiu.${persons.gitHub}">Git</a></td> 
+                <td><a target="_blank" href="https://github.com/${persons.gitHub}">Git</a></td> 
             </tr>`; 
+        
     });
-
-    return personsLi;
+    console.log(typeof personsLi, personsLi)
+    return personsLi.join('');
     
     }
 
