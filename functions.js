@@ -3,20 +3,19 @@ function insertPersons(data) {
     tbody.innerHTML = getPersonsHtml(data);
     }
 
-
-
 function getPersonsHtml (persons) {
-    const personsLi = persons.map(function(persons){
-        return `<tr>
-                <td>${persons.firstName}</td>
-                <td>${persons.lastName}</td>
-                <td><a target="_blank" href="https://github.com/${persons.gitHub}">Git</a></td> 
-            </tr>`; 
-        
-    });
-    console.log(typeof personsLi, personsLi)
-    return personsLi.join('');
-    
+    const personsList = persons.map(person =>{
+        return  getPersonHtml (person)
+        });
+    return personsList.join('');    
+    }
+
+function getPersonHtml (person) {   
+    return    `<tr>
+                <td>${person.firstName}</td>
+                <td>${person.lastName}</td>
+                <td><a target="_blank" href="https://github.com/${person.gitHub}">Git</a></td> 
+            </tr>`;
     }
 
 fetch('team.json')
