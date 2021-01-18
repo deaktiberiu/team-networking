@@ -8,7 +8,7 @@ function getPersonsHtml (persons) {
     return  persons.map(getPersonHtml).join('');    
     }
 
-function getPersonHtml (person) {   
+function getPersonHtml (person) {    
     return `<tr>
                 <td>${person.firstName}</td>
                 <td>${person.lastName}</td>
@@ -27,9 +27,10 @@ fetch('team.json')
     });
     
 function searchPersons(text) {
-   return allPersons.filter(person => {
-       return person.firstName == text;
-   }); 
+    text.toLowerCase();
+    return allPersons.filter(person => {
+       return person.firstName.toLowerCase().indexOf(text) != -1 || person.lastName.toLowerCase().indexOf(text) != -1;
+   });
 }
 
 const search= document.getElementById('search'); 
